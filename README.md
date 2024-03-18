@@ -1,34 +1,14 @@
 # **Awesome ICLR 2024 LLM Papers Collection**
 This repo contains a comprehensive compilation of LLM papers that were presented at the esteemed International Conference on Learning Representations (ICLR) in the year 2024. 2023-2024 will be full of LLMs and 311 papers shows the evidence. 
 
+*Click `Details` to read full abstract and get openreview URL.*
+
 ---
-
-### Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages
-> By enabling privacy-preserving fine-tuning, the Federated Prompt Tuning Paradigm overcomes obstacles in deploying multilingual LLMs for low-resource languages, fostering data efficiency, mutual language enhancement, and broader accessibility.
-
-<details>
-<summary>Details</summary>
-
-- **Abstract**: Pretrained large language models (LLMs) have emerged as a cornerstone in modern natural language processing, with their utility expanding to various applications and languages. However, the fine-tuning of multilingual LLMs, particularly for low-resource languages, is fraught with challenges steming from data-sharing restrictions (the physical border) and from the inherent linguistic differences (the linguistic border). These barriers hinder users of various languages, especially those in low-resource regions, from fully benefiting from the advantages of LLMs.  To overcome these challenges, we propose the Federated Prompt Tuning Paradigm for Multilingual Scenarios, which leverages parameter-efficient fine-tuning in a manner that preserves user privacy. We have designed a comprehensive set of experiments and introduced the concept of "language distance" to highlight the several strengths of this paradigm. Even under computational constraints, our method not only bolsters data efficiency but also facilitates mutual enhancements across languages, particularly benefiting low-resource ones. Compared to traditional local crosslingual transfer tuning methods, our approach achieves a 6.9% higher accuracy, reduces the training parameters by over 99%, and demonstrates stronger cross-lingual generalization. Such findings underscore the potential of our approach to promote social equality, ensure user privacy, and champion linguistic diversity.
-- **OpenReview**: https://openreview.net/pdf?id=zzqn5G9fjn
-        
-</details>
-
-### Enhancing Small Medical Learners with Privacy-preserving Contextual Prompting
-> This method introduces an innovative approach to boost the performance of SLMs in the healthcare sector while simultaneously mitigating privacy concerns. By leveraging LLMs' medical knowledge to generate a specific context, SLMs can enhance their decision-making abilities and achieve performance comparable to LLMs even in privacy-restricted scenarios.
-
-<details>
-<summary>Details</summary>
-
-- **Abstract**: Large language models (LLMs) demonstrate remarkable medical expertise, but data privacy concerns impede their direct use in healthcare environments. Although offering improved data privacy protection, domain-specific small language models (SLMs) often underperform LLMs, emphasizing the need for methods that reduce this performance gap while alleviating privacy concerns. In this paper, we present a simple yet effective method that harnesses LLMs' medical proficiency to boost SLM performance in medical tasks under $privacy-restricted$ scenarios. Specifically, we mitigate patient privacy issues by extracting keywords from medical data and prompting the LLM to generate a medical knowledge-intensive context by simulating clinicians' thought processes. This context serves as additional input for SLMs, augmenting their decision-making capabilities. Our method significantly enhances performance in both few-shot and full training settings across three medical knowledge-intensive tasks, achieving up to a 22.57% increase in absolute accuracy compared to SLM fine-tuning without context, and sets new state-of-the-art results in two medical tasks within privacy-restricted scenarios. Further out-of-domain testing and experiments in two general domain datasets showcase its generalizability and broad applicability.
-- **OpenReview**: https://openreview.net/pdf?id=ztpy1gsUpT
-        
-</details>
 
 ### Detecting Pretraining Data from Large Language Models
 > This paper addresses the challenge of detecting data used to train large language models (LLMs) by proposing a novel method called MIN-K PROB. Unlike existing methods that rely on training a reference model, MIN-K PROB identifies pretraining data based on the assumption that unseen examples contain outlier words with low probabilities under the LLM.
 
-<details>
+<details open>
 <summary>Details</summary>
 
 - **Abstract**: Although large language models (LLMs) are widely deployed, the data used to train them is rarely disclosed. Given the incredible scale of this data, up to trillions of tokens, it is all but certain that it includes potentially problematic text such as copyrighted materials, personally identifiable information, and test data for widely reported reference benchmarks. However, we currently have no way to know which data of these types is included or in what proportions. In this paper, we study the pretraining data detection problem: given a piece of text and black-box access to an LLM without knowing the pretraining data, can we determine if the model was trained on the provided text? To facilitate this study, we introduce a dynamic benchmark WIKIMIA that uses data created before and after model training to support gold truth detection. We also introduce a new detection method MIN-K PROB based on a simple hypothesis: an unseen example is likely to contain a few outlier words with low probabilities under the LLM, while a seen example is less likely to have words with such low probabilities. MIN-K PROB can be applied without any knowledge about the pretrainig corpus or any additional training, departing from previous detection methods that require training a reference model on data that is similar to the pretraining data. Moreover, our experiments demonstrate that MIN-K PROB achieves a 7.4% improvement on WIKIMIA over these previous methods. We apply MIN-K PROB to two real-world scenarios, copyrighted book detection and contaminated downstream example detection, and find that it to be a consistently effective solution.
@@ -3424,3 +3404,25 @@ This repo contains a comprehensive compilation of LLM papers that were presented
         
 </details>
 
+
+### Breaking Physical and Linguistic Borders: Multilingual Federated Prompt Tuning for Low-Resource Languages
+> By enabling privacy-preserving fine-tuning, the Federated Prompt Tuning Paradigm overcomes obstacles in deploying multilingual LLMs for low-resource languages, fostering data efficiency, mutual language enhancement, and broader accessibility.
+
+<details>
+<summary>Details</summary>
+
+- **Abstract**: Pretrained large language models (LLMs) have emerged as a cornerstone in modern natural language processing, with their utility expanding to various applications and languages. However, the fine-tuning of multilingual LLMs, particularly for low-resource languages, is fraught with challenges steming from data-sharing restrictions (the physical border) and from the inherent linguistic differences (the linguistic border). These barriers hinder users of various languages, especially those in low-resource regions, from fully benefiting from the advantages of LLMs.  To overcome these challenges, we propose the Federated Prompt Tuning Paradigm for Multilingual Scenarios, which leverages parameter-efficient fine-tuning in a manner that preserves user privacy. We have designed a comprehensive set of experiments and introduced the concept of "language distance" to highlight the several strengths of this paradigm. Even under computational constraints, our method not only bolsters data efficiency but also facilitates mutual enhancements across languages, particularly benefiting low-resource ones. Compared to traditional local crosslingual transfer tuning methods, our approach achieves a 6.9% higher accuracy, reduces the training parameters by over 99%, and demonstrates stronger cross-lingual generalization. Such findings underscore the potential of our approach to promote social equality, ensure user privacy, and champion linguistic diversity.
+- **OpenReview**: https://openreview.net/pdf?id=zzqn5G9fjn
+        
+</details>
+
+### Enhancing Small Medical Learners with Privacy-preserving Contextual Prompting
+> This method introduces an innovative approach to boost the performance of SLMs in the healthcare sector while simultaneously mitigating privacy concerns. By leveraging LLMs' medical knowledge to generate a specific context, SLMs can enhance their decision-making abilities and achieve performance comparable to LLMs even in privacy-restricted scenarios.
+
+<details>
+<summary>Details</summary>
+
+- **Abstract**: Large language models (LLMs) demonstrate remarkable medical expertise, but data privacy concerns impede their direct use in healthcare environments. Although offering improved data privacy protection, domain-specific small language models (SLMs) often underperform LLMs, emphasizing the need for methods that reduce this performance gap while alleviating privacy concerns. In this paper, we present a simple yet effective method that harnesses LLMs' medical proficiency to boost SLM performance in medical tasks under $privacy-restricted$ scenarios. Specifically, we mitigate patient privacy issues by extracting keywords from medical data and prompting the LLM to generate a medical knowledge-intensive context by simulating clinicians' thought processes. This context serves as additional input for SLMs, augmenting their decision-making capabilities. Our method significantly enhances performance in both few-shot and full training settings across three medical knowledge-intensive tasks, achieving up to a 22.57% increase in absolute accuracy compared to SLM fine-tuning without context, and sets new state-of-the-art results in two medical tasks within privacy-restricted scenarios. Further out-of-domain testing and experiments in two general domain datasets showcase its generalizability and broad applicability.
+- **OpenReview**: https://openreview.net/pdf?id=ztpy1gsUpT
+        
+</details>
